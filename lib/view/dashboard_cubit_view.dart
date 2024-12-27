@@ -28,7 +28,8 @@ class DashboardView extends StatelessWidget {
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Icon(Icons.add, size: 48),
+                  Icon(Icons.add,
+                      size: 48, color: Color.fromARGB(255, 79, 125, 148)),
                   Text('Simple Interest Cubit'),
                 ],
               ),
@@ -42,8 +43,27 @@ class DashboardView extends StatelessWidget {
               child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Icon(Icons.circle, size: 48),
+                  Icon(Icons.circle,
+                      size: 48, color: Color.fromARGB(255, 79, 125, 148)),
                   Text('Area of circle Cubit'),
+                ],
+              ),
+            ),
+          ),
+          Card(
+            child: InkWell(
+              onTap: () {
+                context.read<DashboardCubit>().openArithmeticView(context);
+              },
+              child: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Icon(
+                    Icons.calculate,
+                    size: 48,
+                    color: Color.fromARGB(255, 79, 125, 148),
+                  ),
+                  Text('Arithmetic Cubit'),
                 ],
               ),
             ),
